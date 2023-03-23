@@ -23,8 +23,8 @@ For our final model, we used the features: patch group-wise standardization on m
 **QuantileTransformer on damagetochampions** -  Damage exponentially increases as players are able to buy more items later in the game.  
   
 To determine the best model and its hyperparameters for our final model, we iterated through possible regressor models and printed out their scores. We chose the best three models and then performed GridSearchCV to get their best hyperparameters.   
-![image](https://user-images.githubusercontent.com/112455694/227364190-053e06b0-64b9-4107-9ebd-3c1611d34f2b.png). 
-Finally, we chose the best scoring model with their best hyperparameters which was  
+<img src="h[ttps://mma.prnewswire.com/media/1513369/Educative_Logo.jpg](https://user-images.githubusercontent.com/112455694/227364190-053e06b0-64b9-4107-9ebd-3c1611d34f2b.png)"  width="600" height="300"> 
+Finally, we chose the best scoring model with their best hyperparameters which was:  
 GradientBoostingRegressor() with parameters of: learning_rate = 0.01, max_depth = 4, n_estimators = 1500, subsample = 0.5  
 Our final model with the scores of **(R^2: 0.9480, RMSE: 76.1291)** **considerably performed better** than the baseline model with the scores of **(R^2: 0.9354, RMSE: 84.8329)**.
 
