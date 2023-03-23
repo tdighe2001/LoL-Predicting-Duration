@@ -28,9 +28,9 @@ Our final model with the scores of **(R^2: 0.9480, RMSE: 76.1291)** considerably
 
 ## Fairness Analysis
 
-For our fairness analysis, we chose to compare how the model performed for games belonging to league ‘LCK CL’ vs other leagues. For our evaluation metric, we chose RMSE values and our test statistic is the difference between the RMSE values for the two groups. Thus, we have:
+For our fairness analysis, we chose to compare how the model performed for games belonging to league 'VCS’ vs other leagues. We chose VCS specifically as in our [previous data exploratory analysis](https://tdighe2001.github.io/LoL-Comparing-Action/) we found that VCS had more action-packed games compared to other leagues and wanted to see whether our model performed differently when games had more action. For our evaluation metric, we chose RMSE values and our test statistic is the difference between the RMSE values for the two groups. Thus, we have:
 
-Null hypothesis: Our model is fair. The RMSE for LCK CL and other leagues are roughly the same, and any differences are due to random chance.
-Alternative Hypothesis: Our model is unfair. The RMSE for LCK CL league is lower than for other leagues
+Null hypothesis: Our model is fair. The RMSE for VCS and other leagues are roughly the same, and any differences are due to random chance.
+Alternative Hypothesis: Our model is unfair. The RMSE for VCS league is lower than for other leagues
 
 For a significance level of 0.05, the p value we obtained was 0.6 (or consistently higher than 0.4). Thus, we fail to reject the null hypothesis and claim that our model is indeed fair!
