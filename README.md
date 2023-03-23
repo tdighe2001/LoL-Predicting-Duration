@@ -1,5 +1,7 @@
 # LoL-Predicting-Duration
 
+Our exploratory data analysis on this dataset an be found [here](https://tdighe2001.github.io/LoL-Comparing-Action/)
+
 ## Framing the Problem
 
 We examine the 2022 League of Legends data set and aim to predict the duration of a game with a regression model. Our response variable is the duration of a game as we found it interesting to be able to predict a game's length based on factors in-game. At the time of prediction we have all the information of the game played except for the explicit gamelength. In this process, we generate 2 models: a simple baseline model that uses 2 features, a final model that incorporates feature engineering. We also conduct a fairness analysis test to check the parity of our model. To evaluate our model, we used the metrics of: [root squared mean error](https://en.wikipedia.org/wiki/Coefficient_of_determination) and [coefficient of determination (R^2)](https://en.wikipedia.org/wiki/Coefficient_of_determination). We chose RMSE to determine accuracy of our models while heavily punishing larger errors and R^2 to determine how data fits the model, preventing overfitting.
@@ -20,7 +22,7 @@ For our final model, we used the features: patch group-wise standardization on m
 
 **QuantileTransformer on damagetochampions** -  Damage exponentially increases as players are able to buy more items later in the game.  
   
-To determine the best model and its hyperparameters for our final model, we iterated through possible regressor models and printed out their scores. We chose the best three models and then performed GridSearchCV to get their best hyperparameters. Finally, we chose the best scoring model with their best hyperparameters which was  
+To determine the best model and its hyperparameters for our final model, we iterated through possible regressor models and printed out their scores.We chose the best three models and then performed GridSearchCV to get their best hyperparameters. Finally, we chose the best scoring model with their best hyperparameters which was  
 GradientBoostingRegressor() with parameters of: learning_rate = 0.01, max_depth = 4, n_estimators = 1500, subsample = 0.5  
 Our final model with the scores of **(R^2: 0.9480, RMSE: 76.1291)** considerably performed better than the baseline model with the scores of **(R^2: 0.9354, RMSE: 84.8329)**.
 
